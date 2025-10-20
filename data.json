@@ -1,0 +1,14 @@
+[
+  {
+    "id": "f52eb39f-e450-425a-b524-ae3aadff5cf8",
+    "content": "Buy groceries",
+    "status": "pending",
+    "created_at": "2025-10-19T16:24:34.603147"
+  },
+  {
+    "id": "a1b2c3d4-5678-90ab-cdef-1234567890ab",
+    "content": "Learn Flask",
+    "status": "done",
+    "created_at": "2025-10-19T17:00:00.000000"
+  }
+]

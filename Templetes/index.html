@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Image Title — Portfolio</title>
+  <meta name="description" content="A clean, responsive page showcasing a single image with description, credits, and download link." />
+
+  <!-- Open Graph / Twitter for rich sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Your Image Title — Portfolio" />
+  <meta property="og:description" content="A clean, responsive page showcasing a single image with description, credits, and download link." />
+  <!-- When you publish online, replace with an absolute URL if you want full sharability -->
+  <meta property="og:image" content="{{ url_for('static', filename='your-image.jpg') }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Structured data (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "name": "Your Image Title",
+    "caption": "Short caption or description for the image.",
+    "contentUrl": "{{ url_for('static', filename='your-image.jpg') }}",
+    "thumbnailUrl": "{{ url_for('static', filename='your-image.jpg') }}",
+    "creator": {
+      "@type": "Person",
+      "name": "Hassan Saeed Hassan Mohammed Albattra"
+    },
+    "copyrightNotice": "© 2025 Hassan Saeed Hassan Mohammed Albattra",
+    "datePublished": "2025-01-01"
+  }
+  </script>
+
+  <style>
+    :root { --bg: #0b1020; --card:#10172a; --text:#e7eefc; --muted:#b9c3d9; --brand:#5aa9ff; }
+    @media (prefers-color-scheme: light) {
+      :root { --bg:#f7f9ff; --card:#ffffff; --text:#0d1b2a; --muted:#4a5568; --brand:#0b6bcb; }
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+    header { padding: clamp(16px, 4vw, 32px); text-align:center; }
+    header h1 { margin:0; font-size: clamp(1.25rem, 2.5vw, 1.8rem); }
+    main { display:grid; place-items:center; padding: clamp(16px, 4vw, 32px); }
+    .card { width:min(1100px, 95vw); background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:16px; box-shadow: 0 10px 30px rgba(0,0,0,.25); overflow:hidden; }
+    .media { padding: clamp(12px, 2.5vw, 24px); }
+    figure { margin:0; }
+    img.hero { width:100%; height:auto; display:block; border-radius:12px; background: #0a0a0a; }
+    figcaption { color: var(--muted); font-size: .95rem; margin-top: .6rem; }
+    .content { padding: clamp(16px, 3vw, 28px); display:grid; gap: 10px; }
+    .meta { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px 18px; font-size: .95rem; color: var(--muted); }
+    .meta div span { color: var(--text); font-weight: 600; }
+    .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top: 10px; }
+    .btn { appearance:none; border:none; padding:10px 14px; border-radius:10px; background: var(--brand); color:white; font-weight:600; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:.5rem; }
+    .btn.secondary { background: transparent; color: var(--text); border:1px solid rgba(255,255,255,.18); }
+    footer { padding: 20px; text-align:center; color: var(--muted); font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <a id="top" hidden></a>
+  <header>
+    <h1>Your Image Title</h1>
+    <p class="subtitle">Short one‑line description goes here.</p>
+  </header>
+
+  <main>
+    <article class="card" role="article" aria-labelledby="img-title">
+      <div class="media">
+        <figure>
+          <!-- Replace the filename in /static/ with your real file name. Keep alt meaningful for accessibility. -->
+          <img
+            class="hero"
+            src="{{ url_for('static', filename='your-image.jpg') }}"
+            alt="Describe the key content of the image in one sentence."
+            loading="lazy"
+            decoding   Replace this paragraph with a short story or explanation about the image—what it shows,
+          where it was made, and why it matters. Keep it concise and informative.
+        </p>
+
+        <div class="meta" aria-label="Image details">
+          <div><strong>Author:</strong> <span>Task 1 Devops Engineers</span></div>
+          <div><strong>Date:</strong> <span>2025-01-01</span></div>
+          <div><strong>Location:</strong> <span>City, Country</span></div>
+          <div><strong>License:</strong> <span>© 2025 Hassan Saeed Hassan Mohammed Albattra. All rights reserved.</span></div>
+        </div>
+
+        <div class="actions">
+          <a url_for(
+            Download image
+          </a>
+          #topBack to top</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2025 Task 1 Devops Engineers. Built with a simple, accessible HTML template.</p>
+  </footer>
+</body>
+</html>
